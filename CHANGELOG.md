@@ -2,6 +2,11 @@
 
 Changelog of Advanced Installer GitHub action
 
+## v2.0
+
+* Added deprecation **error** for versions of Advanced Installer that are more than two years old. Please check the [release history](https://www.advancedinstaller.com/version-history.html) to pick a compatible version.
+* Update to node20
+
 ## v1.1
 
 * Added deprecation warning for versions of Advanced Installer that are more than two years old. Please check the [release history](https://www.advancedinstaller.com/version-history.html) to pick a compatible version.
