@@ -1,6 +1,6 @@
 import * as core from '@actions/core';
 import {getLatest, versionIsDeprecated} from './advinstversions';
-import {ADVINST_VER_DEPRECATION_WARNING} from './messages';
+import {ADVINST_VER_DEPRECATION_ERROR} from './messages';
 import {AdvinstBuilder} from './advinstbuilder';
 import {AdvinstTool} from './advinsttool';
 import {isWindows} from './utils';
@@ -20,8 +20,8 @@ async function run(): Promise<void> {
 
     const [isDeprecated, minAllowedVer] = await versionIsDeprecated(version);
     if (isDeprecated) {
-      core.warning(
-        util.format(ADVINST_VER_DEPRECATION_WARNING, minAllowedVer, version)
+      throw new Error(
+        util.format(ADVINST_VER_DEPRECATION_ERROR, minAllowedVer, version)
       );
     }
 
