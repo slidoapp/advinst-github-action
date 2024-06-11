@@ -27,7 +27,7 @@ export async function getAll(): Promise<string[]> {
 }
 
 export async function getMinAllowedAdvinstVersion(): Promise<string | null> {
-  const RELEASE_INTERVAL_MONTHS = 24;
+  const RELEASE_INTERVAL_MONTHS = 48;
 
   const minReleaseDate = new Date();
   minReleaseDate.setMonth(minReleaseDate.getMonth() - RELEASE_INTERVAL_MONTHS);

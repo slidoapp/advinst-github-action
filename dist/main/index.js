@@ -404,7 +404,7 @@ function getAll() {
 exports.getAll = getAll;
 function getMinAllowedAdvinstVersion() {
     return __awaiter(this, void 0, void 0, function* () {
-        const RELEASE_INTERVAL_MONTHS = 24;
+        const RELEASE_INTERVAL_MONTHS = 48;
         const minReleaseDate = new Date();
         minReleaseDate.setMonth(minReleaseDate.getMonth() - RELEASE_INTERVAL_MONTHS);
         const versionsFile = yield toolCache.downloadTool('https://www.advancedinstaller.com/downloads/updates.ini');
